@@ -53,6 +53,12 @@
   font-size: larger;
 }
 
+.NavBar .modeToggleButton {
+  background-color: transparent;
+  border: none;
+  width: 2%;
+}
+
 .NavBar .Time {
   text-decoration: none;
   color: white;
@@ -61,7 +67,7 @@
   font-size: calc(1rem + 1vw);
   justify-content: center;
   align-items: center;
-  margin-right: 1vw;
+  margin-right: 2.5vw;
 }
 
 #about,
@@ -82,6 +88,21 @@
 }
 
 @media (max-width: 1679px) {
+  .NavBar .Time {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    right: 0;
+    font-size: calc(1rem + 1vw);
+    justify-content: center;
+    align-items: center;
+    margin-right: 6%;
+  }
+
+  .NavBar .modeToggleButton {
+    margin-right: 0.75%;
+  }
+
   .NavBar .Navigation {
     display: none; /* Hide navigation links */
   }
@@ -95,8 +116,8 @@
   .NavBar .MobileNavigation .Hamburger {
     position: absolute;
     margin-top: -1%;
-    margin-left: 5vw;
-    right: 1vw;
+    margin-left: 5%;
+    right: 3%;
     cursor: pointer;
   }
 
@@ -139,7 +160,7 @@
   .NavBar .MobileNavigation .Hamburger {
     position: absolute;
     margin-top: -2%;
-    right: 0.75%;
+    right: 6%;
     cursor: pointer;
   }
 
@@ -168,9 +189,17 @@
   }
 
   .NavBar .Time {
-    margin-right: 60%;
+    margin-right: 70%;
     margin-top: 0.75%;
-    font-size: 3vw;
+    font-size: 2.5vw;
+  }
+
+  .NavBar .modeToggleButton {
+    background-color: transparent;
+    border: none;
+    width: 2%;
+    margin-right: 4%;
+    margin-top: -1.5%;
   }
 
   #about,

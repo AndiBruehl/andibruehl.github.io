@@ -163,13 +163,13 @@ const Contacts = () => {
         &copy; {currentYear} A. Brühl - All rights reserved
       </motion.p>
 
-      <motion.a
+      {/* <motion.a
         href="/imprint"
         style={{ textDecoration: "none", color: "white" }}
         variants={contactLinkVariants}
       >
         Impressum/Imprint
-      </motion.a>
+      </motion.a> */}
       {isContactModalOpen && <ContactModal onClose={closeContactModal} />}
     </motion.div>
   );
