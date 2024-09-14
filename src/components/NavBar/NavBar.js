@@ -68,7 +68,7 @@ const NavBar = () => {
         <Navigation />
         <MobileNavigation />
         <div className={classes.Time}>
-          {currentDayOfWeek}, {formattedDateTime} Uhr
+          {currentDayOfWeek}, {formattedDateTime}
         </div>
         <button onClick={toggleTheme} className={classes.modeToggleButton}>
           {darkMode ? "☀️" : "🌙"}
