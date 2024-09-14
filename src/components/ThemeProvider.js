@@ -12,11 +12,13 @@ const ThemeProvider = ({ children }) => {
       root.style.setProperty(`--${key}`, themeVariables[key]);
     });
 
-    // Toggle dark mode class on body
+    // Apply background image
+    document.body.style.backgroundImage = themeVariables.backgroundImage;
+    document.body.style.backgroundRepeat = "no-repeat"; // No repeat
+    document.body.style.backgroundSize = "cover"; // Cover entire screen
+    document.body.style.backgroundPosition = "center"; // Center the background
+    document.body.style.backgroundAttachment = "fixed"; // Fixed while scrolling
     document.body.classList.toggle("dark-mode", theme === "dark");
-
-    // Log the current theme mode
-    console.log(`Current theme: ${theme}`);
   }, [theme]);
 
   return <>{children}</>;

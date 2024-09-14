@@ -43,12 +43,16 @@ const portfolioImages = [
   { src: slide_image_11, alt: "slide_image_11", caption: "Farbgenerator" },
   { src: slide_image_12, alt: "slide_image_12", caption: "JobStar" },
   { src: slide_image_13, alt: "slide_image_13", caption: "Search4GithubUsers" },
-  { src: slide_image_14, alt: "slide_image_14", caption: "GuessMyNumber" },
-  { src: slide_image_15, alt: "slide_image_15", caption: "MemSnap" },
+  {
+    src: slide_image_14,
+    alt: "slide_image_14",
+    caption: "GuessMyNumber\n(APK)",
+  },
+  { src: slide_image_15, alt: "slide_image_15", caption: "MemSnap\n(APK)" },
   {
     src: slide_image_16,
     alt: "slide_image_16",
-    caption: "Windows-Rechnungs-App ( C# )",
+    caption: "Windows-Rechnungs-App\n(C#)",
   },
 ];
 

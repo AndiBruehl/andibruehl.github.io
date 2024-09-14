@@ -16,6 +16,7 @@ const words = [
   "GCP",
   "sqlite",
   "Electron",
+  "c#",
 ];
 
 export default words;

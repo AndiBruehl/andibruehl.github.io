@@ -5,17 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("/src/assets/Background.jpg");
+
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: azure;
-  color: azure;
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-attachment: fixed; /* Keeps it fixed while scrolling */
+
   font-size: x-large;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  background: url("/src/assets/Background.jpg") center / cover no-repeat fixed !important;
 }
 
 html {
@@ -25,42 +23,36 @@ html {
 
 h1 {
   font-weight: 900;
-  /* font-size: 2.8125rem; */
   font-size: calc(1rem + 3vw);
   color: white;
 }
 
 h2 {
   font-weight: 700;
-  /* font-size: 1,4375rem; */
   font-size: calc(1rem + 1.5vw);
   color: white;
 }
 
 h3 {
   font-weight: 20;
-  /* font-size: 1,4375rem; */
   font-size: calc(1rem + 0.75vw);
   color: white;
 }
 
 p {
   font-weight: 500;
-  /* font-size: 1,3125rem; */
   font-size: calc(0.75rem + 1vw);
   color: white;
 }
 
 a {
   font-weight: 900;
-  /* font-size: 1rem; */
   font-size: calc(0.6rem + 1vw);
   color: white;
 }
 
 li {
   font-weight: 900;
-  /* font-size: 1rem; */
   font-size: calc(0.6rem + 1vw);
   color: white;
 }

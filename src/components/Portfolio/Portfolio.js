@@ -16,7 +16,7 @@ const Header = styled.h2`
   text-align: center;
   color: azure;
   padding: 2%;
-  margin-top: -5%;
+  margin-top: -6%;
   font-family: "Playfair Display", serif;
 `;
 

@@ -1,5 +1,4 @@
 // src/styles/themes.js
-
 export const lightTheme = {
   background: "#ffffff",
   text: "#000000",
@@ -7,6 +6,7 @@ export const lightTheme = {
   linkColor: "white",
   navbarScrolledBackground: "rgba(55, 160, 201, 0.885)",
   navbarLinkHoverColor: "#0027b2",
+  backgroundImage: 'url("/assets/Background-dark.jpg")', // Light mode image (correct path)
   backgroundImageFilter: "brightness(100%)",
 };
 
@@ -17,5 +17,6 @@ export const darkTheme = {
   linkColor: "#E0E0E0",
   navbarScrolledBackground: "#333333",
   navbarLinkHoverColor: "#BB86FC",
+  backgroundImage: 'url("/assets/Background.jpg")', // Dark mode image (correct path)
   backgroundImageFilter: "brightness(50%)",
 };

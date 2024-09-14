@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import classes from "./NavBar.module.css";
 import MobileNavigation from "./MobileNavigation";
 import Navigation from "./Navigation";
-import { darkTheme, lightTheme } from "../../styles/themes"; // Pfad zu deiner themes.js
+import { darkTheme, lightTheme } from "../../styles/themes"; // Import themes
 
 const NavBar = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
-  const [darkMode, setDarkMode] = useState(true); // Standard auf Dark Mode
+  const [darkMode, setDarkMode] = useState(true); // Default to Dark Mode
 
   // Update the currentDateTime every second
   useEffect(() => {
@@ -14,8 +14,7 @@ const NavBar = () => {
       setCurrentDateTime(new Date());
     }, 1000);
 
-    // Clear the interval when the component unmounts
-    return () => clearInterval(intervalId);
+    return () => clearInterval(intervalId); // Clear the interval when the component unmounts
   }, []);
 
   // Get the current day of the week
@@ -40,6 +39,9 @@ const NavBar = () => {
       ? darkTheme.background
       : lightTheme.background;
     document.body.style.color = darkMode ? darkTheme.text : lightTheme.text;
+    document.body.style.backgroundImage = darkMode
+      ? darkTheme.backgroundImage
+      : lightTheme.backgroundImage; // Update background image
     document.body.classList.toggle("dark-mode", !darkMode);
   };
 
@@ -51,6 +53,9 @@ const NavBar = () => {
       ? darkTheme.background
       : lightTheme.background;
     document.body.style.color = savedMode ? darkTheme.text : lightTheme.text;
+    document.body.style.backgroundImage = savedMode
+      ? darkTheme.backgroundImage
+      : lightTheme.backgroundImage; // Apply background image from saved theme
     document.body.classList.toggle("dark-mode", savedMode);
   }, []);
 
