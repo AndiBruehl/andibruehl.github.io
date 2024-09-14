@@ -3,6 +3,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh; /* Ensure the content takes up full viewport height */
+  text-align: center; /* Center the text inside the pong container */
+}
+
+.pongIcons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px; /* Add some space between elements */
+}
+
+.pongIcons a {
+  text-decoration: none; /* Remove underline from text */
 }
 
 .ModalOverlay {
@@ -39,4 +54,60 @@
   .pong {
     display: none;
   }
+}
+
+.ButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.Button {
+  background-color: #0027b2;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50px; /* Rounded shape */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.Button:hover {
+  background-color: #0047ff; /* Darker blue on hover */
+}
+
+.ModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.ModalContent {
+  background-color: rgb(66, 66, 66);
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.CloseButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: red;
 }

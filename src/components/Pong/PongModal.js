@@ -16,7 +16,7 @@ const PongModal = ({ onClose }) => {
     <div className={classes.ModalOverlay} onClick={onClose}>
       <div
         className={classes.ModalContent}
-        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+        onClick={(e) => e.stopPropagation()}
       >
         <span className={classes.CloseButton} onClick={onClose}>
           &times;

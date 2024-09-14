@@ -4,7 +4,7 @@ import PongModal from "./PongModal";
 import { motion } from "framer-motion";
 
 const svgStyles = {
-  filter: "invert(1)", // Invert the colors of the SVG
+  fill: "#0027b2", // Set the egg color to #0027b2
   transform: "rotate(-15deg)", // Rotate the SVG 15 degrees to the left
 };
 
@@ -52,17 +52,17 @@ const Pong = () => {
       <div className={classes.pongIcons}>
         <div className="footer-icons">
           <a href="#pong" onClick={openPongGame}>
-            <h6>
+            <h4>
               Herzlichen Glückwunsch, du hast das Easter-Egg gefunden! Viel Spaß
               beim Spielen! (klick auf das Ei!)
-            </h6>
+            </h4>
             <br />
             <img
               src="https://www.svgrepo.com/show/116037/easter-egg.svg"
               width="50px"
               height="50px"
               alt="Pong"
-              style={svgStyles}
+              style={svgStyles} // Apply the egg color style
             />
           </a>
         </div>
