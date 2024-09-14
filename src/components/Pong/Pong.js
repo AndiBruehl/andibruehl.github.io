@@ -14,7 +14,7 @@ const Pong = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 1426) {
+      if (window.innerWidth < 1679) {
         setIsVisible(false);
         setIsModalOpen(false);
       } else {
@@ -52,10 +52,15 @@ const Pong = () => {
       <div className={classes.pongIcons}>
         <div className="footer-icons">
           <a href="#pong" onClick={openPongGame}>
+            <h6>
+              Herzlichen Glückwunsch, du hast das Easter-Egg gefunden! Viel Spaß
+              beim Spielen! (klick auf das Ei!)
+            </h6>
+            <br />
             <img
               src="https://www.svgrepo.com/show/116037/easter-egg.svg"
-              width="20px"
-              height="20px"
+              width="50px"
+              height="50px"
               alt="Pong"
               style={svgStyles}
             />

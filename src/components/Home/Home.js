@@ -17,16 +17,56 @@ class Home extends Component {
 
   componentDidMount() {
     this.interval = setInterval(this.changeWord, 4000); // Change every 4 seconds
+
+    // Add click event to the Code image only on desktop (resolution above 1679px)
+    if (window.innerWidth > 1679) {
+      this.addCodeImageClickHandler();
+    }
+
+    // Add resize event listener to handle window resizing
+    window.addEventListener("resize", this.handleResize);
   }
 
   componentWillUnmount() {
     clearInterval(this.interval);
+    window.removeEventListener("resize", this.handleResize); // Remove event listener on unmount
   }
 
+  // Change the word in the rotator
   changeWord = () => {
     this.setState((prevState) => ({
       currentIndex: (prevState.currentIndex + 1) % words.length,
     }));
+  };
+
+  // Handle resize event to toggle the click event based on screen width
+  handleResize = () => {
+    if (window.innerWidth > 1679) {
+      this.addCodeImageClickHandler();
+    } else {
+      this.removeCodeImageClickHandler();
+    }
+  };
+
+  // Add the click handler for desktop
+  addCodeImageClickHandler = () => {
+    const codeImage = document.querySelector(`.${classes.Code}`);
+    if (codeImage) {
+      codeImage.addEventListener("click", this.redirectToPong);
+    }
+  };
+
+  // Remove the click handler for mobile
+  removeCodeImageClickHandler = () => {
+    const codeImage = document.querySelector(`.${classes.Code}`);
+    if (codeImage) {
+      codeImage.removeEventListener("click", this.redirectToPong);
+    }
+  };
+
+  // Redirect to the /pong route
+  redirectToPong = () => {
+    window.location.href = "/pong";
   };
 
   render() {
