@@ -1,6 +1,7 @@
 .Skills {
   padding-bottom: 5%;
   margin-top: 2rem;
+  margin-bottom: 2vh; /* Add margin-bottom to create space at the bottom of the page */
 }
 
 .Skills .Paragraphs {
@@ -48,7 +49,6 @@
 .Skills .List ul li {
   display: flex;
   justify-content: center;
-  /* padding: 5%; */
   text-align: center;
 }
 
@@ -67,7 +67,6 @@
 
   .Skills p {
     width: 80%;
-    /* padding-left: 10%; */
   }
 
   .Skills .Container {
@@ -76,7 +75,7 @@
   }
 }
 
-/* Example CSS - adapt as needed */
+/* General Styles */
 .Skills {
   padding: 20px;
 }

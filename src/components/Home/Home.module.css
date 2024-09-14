@@ -13,7 +13,7 @@
 
 .Home .Container h1 {
   margin: 0;
-  padding-left: 10vh;
+  padding-left: 25%;
 }
 
 .Home .Container .Hello {
@@ -42,13 +42,14 @@
   height: 100px;
   overflow: hidden;
   z-index: 3;
+  margin-left: -45vw;
 }
 
 /* Smooth fading for changing title */
 .Home .ChangingTitle {
-  position: absolute;
+  /* position: relative; */
   width: 100%;
   text-align: center;
-  font-size: 75px;
+  font-size: 30px;
   color: #0027b2;
 }
