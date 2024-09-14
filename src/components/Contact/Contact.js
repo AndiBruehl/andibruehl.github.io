@@ -78,14 +78,14 @@ const Contacts = () => {
     },
   };
 
-  const contactLinkVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { delay: 1.8, duration: 0.6 },
-    },
-  };
+  // const contactLinkVariants = {
+  //   hidden: { opacity: 0, y: 20 },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: { delay: 1.8, duration: 0.6 },
+  //   },
+  // };
 
   return (
     <motion.div
