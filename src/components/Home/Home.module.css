@@ -1,0 +1,54 @@
+.Home {
+  display: flex;
+  height: 85vh;
+  padding-top: 15vh;
+  position: relative;
+  overflow: hidden; /* Ensures no overflow */
+}
+
+.Home .Container {
+  position: absolute;
+  color: azure;
+}
+
+.Home .Container h1 {
+  margin: 0;
+  padding-left: 10vh;
+}
+
+.Home .Container .Hello {
+  font-size: calc(1.7rem + 3vw);
+}
+
+.Home .Code {
+  max-height: 20%;
+  max-width: 150px;
+  position: absolute;
+  bottom: 5%;
+}
+
+.Home .binaryWorld {
+  width: 50%;
+  max-width: 500px;
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+/* Rotator container */
+.Home .Rotator {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  z-index: 3;
+}
+
+/* Smooth fading for changing title */
+.Home .ChangingTitle {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 75px;
+  color: #0027b2;
+}

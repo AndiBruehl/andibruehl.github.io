@@ -1,0 +1,8 @@
+/* WaveLine.module.css */
+.WaveLine {
+  width: 100%;
+  height: 10px; /* Adjust as needed */
+  background-color: "transparent"; /* Adjust the color */
+  position: relative;
+  z-index: 2; /* Make sure it has a higher z-index than other elements if needed */
+}

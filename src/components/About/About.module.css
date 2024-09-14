@@ -1,0 +1,87 @@
+.AboutMe {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Hintergrundbild fixieren */
+  padding-top: 5vh;
+  margin-bottom: 2vh;
+}
+
+.AboutMe .Container {
+  display: flex;
+
+  /* Kein Flexbox-Layout verändern */
+}
+
+.AboutMe .Container .Text {
+  margin-left: 15%;
+  width: 60%;
+  font-size: 6rem; /* Schriftgröße angepasst */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Drop-shadow */
+}
+
+.AboutMe .Container .Text h2 {
+  font-weight: 900;
+}
+
+.AboutMe .Container .Photo {
+  display: flex;
+  position: fixed; /* Fixieren */
+  width: 15vw; /* Prozentuale Breite */
+  height: 15vw; /* Höhe proportional zur Breite */
+  top: 10vh; /* Mehr Padding-Top hinzufügen */
+  left: 2vw; /* Vom linken Rand der Seite */
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 1; /* Sicherstellen, dass das Bild oben liegt */
+}
+
+.AboutMe .Container .Photo .Me {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  position: relative;
+}
+
+.AboutMe .Container .Photo::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #0027b2;
+  position: absolute;
+  border-radius: 50%;
+  top: -5%; /* Sichtbar leicht am oberen Rand */
+  left: -5%; /* Sichtbar leicht am linken Rand */
+}
+
+@media (max-width: 1024px) {
+  .AboutMe .Container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0; /* Ändern Sie dies auf 0 */
+  }
+  .AboutMe .Container .Text {
+    margin-left: 0; /* Ändern Sie dies auf 0 */
+    width: 90%; /* Breite angepasst */
+    font-size: 5rem; /* Schriftgröße für kleinere Bildschirme */
+  }
+  .AboutMe .Container .Photo {
+    width: 20vw; /* Prozentuale Breite */
+    height: 20vw; /* Höhe proportional zur Breite */
+    top: 12vh; /* Mehr Padding-Top hinzufügen */
+    left: 2vw; /* Vom linken Rand der Seite */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Für mobile Geräte */
+  .AboutMe .Container .Text {
+    font-size: 4rem; /* Schriftgröße für mobile Geräte */
+  }
+  .ModalContent {
+    width: 90vw;
+    max-width: 90vw;
+  }
+}

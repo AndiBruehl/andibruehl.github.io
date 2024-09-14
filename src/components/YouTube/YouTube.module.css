@@ -1,0 +1,95 @@
+.YouTube {
+  height: 100%;
+  margin-top: 4rem;
+}
+
+.YouTube .Paragraph {
+  width: 65%;
+  margin-top: -5%;
+  text-align: center;
+  font-size: larger;
+}
+
+.YouTube .YouTubeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Background styles */
+.YouTube .Background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.YouTube .Videos {
+  width: 70%;
+  /* gap: 20px; */
+}
+
+.YouTube .Videos .VideoContainer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  background: rgba(135, 206, 235, 0.5);
+  border-radius: 25%;
+  box-shadow: 1px 1px 0 0 white;
+  gap: 20px;
+}
+
+.YouTube .VideoContainer .Text {
+  padding-left: 1.5%; /* Reduced padding */
+  padding-right: 1.5%;
+  width: 45%;
+}
+
+.YouTube .VideoContainer .Thumbnail {
+  padding: 5%; /* Reduced padding */
+  width: 45%;
+
+  position: relative;
+}
+
+.YouTube .VideoContainer .Thumbnail img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 25px;
+}
+
+.YouTube .VideoContainer .Thumbnail .PlayButton {
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+@media (max-width: 746px) {
+  .YouTube .Videos .VideoContainer {
+    flex-direction: column;
+  }
+
+  .YouTube .Videos .Text {
+    width: 80%;
+  }
+
+  .YouTube .Videos .Thumbnail {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .YouTube .Videos .Text {
+    width: 90%;
+  }
+
+  .YouTube .Videos .Thumbnail {
+    width: 90%;
+  }
+}

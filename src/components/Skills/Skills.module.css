@@ -1,0 +1,94 @@
+.Skills {
+  padding-bottom: 5%;
+  margin-top: 2rem;
+}
+
+.Skills .Paragraphs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  font-size: larger;
+}
+
+.Skills .List ul {
+  color: white;
+  list-style-type: none;
+  padding: 0;
+}
+
+.Skills .Container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+  /* justify-content: space-around; */
+}
+
+.Skills .Container img {
+  width: 40%;
+  padding-top: 4%;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.Skills .Container .List {
+  flex-basis: 33%;
+  background-color: black;
+  box-shadow: 0.3vh 0.3vw 0 0 white;
+  border-radius: 9px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+
+.Skills .List ul li {
+  display: flex;
+  justify-content: center;
+  /* padding: 5%; */
+  text-align: center;
+}
+
+@media (max-width: 910px) {
+  .Skills .Container img {
+    width: 60%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (max-width: 746px) {
+  .Skills .Container .List {
+    flex-basis: 49%;
+  }
+
+  .Skills p {
+    width: 80%;
+    /* padding-left: 10%; */
+  }
+
+  .Skills .Container {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+/* Example CSS - adapt as needed */
+.Skills {
+  padding: 20px;
+}
+
+.Paragraphs {
+  margin-bottom: 20px;
+}
+
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.List {
+  margin: 10px;
+}

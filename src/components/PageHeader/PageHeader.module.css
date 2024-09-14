@@ -1,0 +1,19 @@
+.Container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2%;
+}
+
+.Container hr {
+  position: absolute;
+  left: 0;
+  width: 12vw;
+  border: 5px solid #0027b2;
+  border-radius: 20px;
+}
+
+.Container h1 {
+  color: white;
+}
