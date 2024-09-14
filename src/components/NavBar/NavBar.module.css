@@ -169,21 +169,18 @@
     flex-direction: column;
     position: absolute;
     top: calc(2.2rem + 3vw);
-    right: 0vw;
-    width: 20vw;
+    right: 2vw;
+    width: 25vw;
     background-color: #3d64f36a;
     border-top: 2px solid #0027b2;
     border-radius: 10px;
-    padding: 2px 0;
-  }
-
-  .NavBar nav ul li {
-    padding: 2px 0;
+    padding: 2px;
   }
 
   .NavBar nav ul li a {
     display: block;
-    padding: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     text-decoration: none;
     color: white;
   }

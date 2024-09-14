@@ -38,6 +38,7 @@
 }
 /* Rotator container */
 .Home .Rotator {
+  padding-top: 10px;
   position: relative;
   height: 100px;
   overflow: hidden;

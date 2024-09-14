@@ -17,7 +17,7 @@ const NavLinks = ({ isMobile, closeMobileMenu }) => {
 
   const links = [
     { name: "Home", href: "/", delay: 0.05 },
-    { name: "About Me", href: "/about", delay: 0.1 },
+    { name: "About", href: "/about", delay: 0.1 },
     { name: "Skills", href: "/skills", delay: 0.15 },
     { name: "Portfolio", href: "/portfolio", delay: 0.2 },
     { name: "Links", href: "/links", delay: 0.25 },
