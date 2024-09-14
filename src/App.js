@@ -11,7 +11,7 @@ import YouTube from "./components/YouTube/YouTube";
 import Links from "./components/Links/Links";
 import Certs from "./components/Certs/Certs";
 import Pong from "./components/Pong/Pong";
-import Imprint from "./components/Contact/Imprint"; // Importiere die Imprint-Komponente
+import Imprint from "./components/Contact/Imprint";
 
 const App = () => {
   return (
@@ -30,7 +30,7 @@ const App = () => {
             <Route path="/certs" element={<Certs />} />
             <Route path="/downloads" element={<Downloads />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/imprint" element={<Imprint />} />{" "}
+            <Route path="/imprint" element={<Imprint />} />
           </Routes>
         </div>
       </React.Fragment>
