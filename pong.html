@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pong Spiel</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        height: 100%;
+        background-color: rgb(66, 66, 66);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
+        position: relative;
+      }
+      canvas {
+        background-color: black;
+        border-radius: 10px;
+        display: block; /* Prevent any extra space below the canvas */
+      }
+      button {
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 25px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: lightblue;
+      }
+      button:active {
+        background-color: darkblue;
+      }
+      #startButton {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+      .hidden {
+        display: none;
+      }
+      .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(66, 66, 66);
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        color: white;
+        font-family: Arial, sans-serif;
+        border-radius: 25px;
+        z-index: 2;
+      }
+      .modal.hidden {
+        display: none;
+      }
+      .instructions {
+        text-align: center;
+        margin-top: -70px;
+        color: white;
+        font-size: 16px;
+      }
+      .hidden-cursor {
+        cursor: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="startButton">Spiel Starten</button>
+      <canvas id="canvas" width="720" height="480"></canvas>
+    </div>
+    <div class="instructions">
+      <h4>Spieler 1 (Blau): W (hoch), S (runter)</h4>
+      <h4>Spieler 2 (Rot): Pfeil hoch (hoch), Pfeil runter (runter)</h4>
+      <h5>Wer zuerst 5 hat, gewinnt!</h5>
+      <!-- <h4 style="color: red">
+        ACHTUNG! Ball wird nach jeder Runde schneller!! ;)
+      </h4> -->
+    </div>
+    <div id="modal" class="modal hidden">
+      <p id="winnerMessage"></p>
+      <!-- <button id="restartButton">Spiel Neustarten</button> -->
+    </div>
+    <script>
+      let canvas = document.getElementById("canvas");
+      let context = canvas.getContext("2d");
+      let player1 = 80;
+      let player2 = 80;
+      let key = {};
+      let ball = { x: 360, y: 240, speedX: 3, speedY: 0 };
+      let player1Points = 0;
+      let player2Points = 0;
+      let gameStarted = false;
+      let startButton = document.getElementById("startButton");
+      let modal = document.getElementById("modal");
+      let winnerMessage = document.getElementById("winnerMessage");
+      let restartButton = document.getElementById("restartButton");
+
+      document.addEventListener("keydown", (e) => (key[e.keyCode] = true));
+      document.addEventListener("keyup", (e) => (key[e.keyCode] = false));
+
+      startButton.addEventListener("click", () => {
+        startGame();
+      });
+
+      restartButton.addEventListener("click", () => {
+        restartGame();
+      });
+
+      function startGame() {
+        gameStarted = true;
+        startButton.classList.add("hidden");
+        modal.classList.add("hidden");
+        document.body.classList.add("hidden-cursor");
+        draw();
+        setInterval(loop, 1000 / 60);
+      }
+
+      function restartGame() {
+        gameStarted = true;
+        modal.classList.add("hidden");
+        resetGame();
+        startGame(); // Start the game again after restarting
+      }
+
+      document.addEventListener("mousemove", () => {
+        document.body.classList.remove("hidden-cursor");
+      });
+
+      function draw() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.fillStyle = "black";
+        context.fillRect(0, 0, 720, 480);
+        context.fillStyle = "blue";
+        context.fillRect(10, player1, 10, 80);
+        context.fillStyle = "red";
+        context.fillRect(700, player2, 10, 80);
+        context.fillStyle = "white";
+        context.beginPath();
+        context.arc(ball.x, ball.y, 5, 0, Math.PI * 2, true);
+        context.fill();
+
+        context.font = "20px Arial";
+        context.fillText(`Spieler 1: ${player1Points}`, 20, 20);
+        context.fillText(`Spieler 2: ${player2Points}`, 580, 20);
+
+        requestAnimationFrame(draw);
+      }
+
+      function loop() {
+        if (!gameStarted) return;
+
+        if (key[38]) {
+          player2 -= 5;
+        }
+
+        if (key[40]) {
+          player2 += 5;
+        }
+
+        if (key[87]) {
+          player1 -= 5;
+        }
+
+        if (key[83]) {
+          player1 += 5;
+        }
+
+        ball.x += ball.speedX;
+        ball.y += ball.speedY;
+
+        if (ball.x < 20) {
+          if (ball.y > player1 && ball.y < player1 + 80 && ball.speedX < 0) {
+            ball.speedX = -ball.speedX;
+            ball.speedY = (ball.y - player1 - 40) * 0.1;
+          } else if (ball.x < 0) {
+            player2Points++;
+            resetBall();
+          }
+        }
+
+        if (ball.x > 690) {
+          if (ball.y > player2 && ball.y < player2 + 80 && ball.speedX > 0) {
+            ball.speedX = -ball.speedX;
+            ball.speedY = (ball.y - player2 - 40) * 0.1;
+          } else if (ball.x > 720) {
+            player1Points++;
+            resetBall();
+          }
+        }
+
+        if (ball.y < 0 || ball.y > 480) {
+          ball.speedY = -ball.speedY;
+        }
+
+        if (player1Points === 5 || player2Points === 5) {
+          gameStarted = false;
+          winnerMessage.innerText = `Spieler ${
+            player1Points === 5 ? 1 : 2
+          } gewinnt!`;
+          modal.classList.remove("hidden");
+        }
+      }
+
+      function resetBall() {
+        ball = {
+          x: 360,
+          y: 240,
+          speedX: 3,
+          speedY: 0,
+        };
+      }
+
+      function resetGame() {
+        player1Points = 0;
+        player2Points = 0;
+        player1 = 80;
+        player2 = 80;
+        resetBall();
+      }
+    </script>
+  </body>
+</html>
