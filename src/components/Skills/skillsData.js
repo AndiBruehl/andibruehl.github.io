@@ -2,12 +2,12 @@
 
 export const skillData = [
   {
-    title: "BACKEND",
-    skills: ["SQL - NoSQL - Python", "NodeJS - mariaDB - MongoDB"],
+    title: "BACKEND / Database",
+    skills: [" Python - NodeJS - C#"],
   },
   {
     title: "FRONTEND",
-    skills: ["JavaScript - ReactJS - HTML&CSS", "Electron"],
+    skills: ["JavaScript - ReactJS - HTML&CSS", "Electron - NextJS - shadCN"],
   },
   {
     title: "OS",
@@ -25,7 +25,11 @@ export const skillData = [
     ],
   },
   {
+    title: "DATABASE",
+    skills: ["SQL - NoSQL - mariaDB", "MongoDB"],
+  },
+  {
     title: "WEITERE SKILLS",
-    skills: ["GitHub - firebase - SCRUM-Basics"],
+    skills: ["GitHub - GitLab - firebase", "SCRUM-Basics"],
   },
 ];

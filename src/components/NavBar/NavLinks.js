@@ -21,7 +21,7 @@ const NavLinks = ({ isMobile, closeMobileMenu }) => {
     { name: "Skills", href: "/skills", delay: 0.15 },
     { name: "Portfolio", href: "/portfolio", delay: 0.2 },
     { name: "Links", href: "/links", delay: 0.25 },
-    { name: "YouTube", href: "/youtube", delay: 0.3 },
+    // { name: "YouTube", href: "/youtube", delay: 0.3 },
     { name: "Certificates", href: "/certs", delay: 0.35 },
     { name: "Downloads", href: "/downloads", delay: 0.4 },
     { name: "Contact", href: "/contact", delay: 0.45 },

@@ -1,9 +1,9 @@
 // wordList.js
 const words = [
   "Linux",
-  "AWS",
-  "Scrum",
-  "Docker",
+  // "AWS",
+  // "Scrum",
+  //  "Docker",
   "Python",
   "nodeJS",
   "nextJS",
