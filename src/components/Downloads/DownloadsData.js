@@ -5,12 +5,7 @@ const downloadsData = [
     text: "↓ Lebenslauf/CV PDF",
     link: "https://drive.google.com/file/d/1kwRnfytrAj3bk05b9fMaW2tVjTfHsPYh/view?usp=drive_link",
   },
-  {
-    id: "QuizApp-Download",
-    handler: "handleDownloadQuizApp",
-    text: "↓ QuizTopia-App offline\n(Windows)",
-    link: "https://drive.google.com/file/d/1K6hYlbgT_Scj-efPbfabPHF0ike8rPm9/view?usp=drive_link",
-  },
+
   {
     id: "Skillnachweis-Download",
     handler: "handleDownloadSkills",
@@ -34,6 +29,13 @@ const downloadsData = [
     handler: "memSnapDownloadCert",
     text: "↓ MemSnapBeta.apk - Save your favorite locations on your device!",
     link: "https://drive.google.com/file/d/1utOkPZFcylJ6PV0vZ7ib2IMeFEftJO40/view?usp=drive_link",
+  },
+
+  {
+    id: "QuizApp-Download",
+    handler: "handleDownloadQuizApp",
+    text: "↓ QuizTopia-App offline\n(Windows)",
+    link: "https://drive.google.com/file/d/1K6hYlbgT_Scj-efPbfabPHF0ike8rPm9/view?usp=drive_link",
   },
   {
     id: "Invoicer-Download",
