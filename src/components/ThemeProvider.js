@@ -19,7 +19,7 @@ const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     const root = document.documentElement;
-    const themeVariables = theme === "light" ? darkTheme : lightTheme;
+    const themeVariables = theme === "dark" ? darkTheme : lightTheme;
 
     Object.keys(themeVariables).forEach((key) => {
       root.style.setProperty(`--${key}`, themeVariables[key]);
