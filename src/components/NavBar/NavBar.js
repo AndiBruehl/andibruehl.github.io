@@ -35,28 +35,30 @@ const NavBar = () => {
   const toggleTheme = () => {
     setDarkMode(!darkMode);
     localStorage.setItem("darkMode", !darkMode);
-    document.body.style.backgroundColor = darkMode
+    document.body.style.backgroundColor = !darkMode
       ? darkTheme.background
       : lightTheme.background;
-    document.body.style.color = darkMode ? darkTheme.text : lightTheme.text;
-    document.body.style.backgroundImage = darkMode
+    document.body.style.color = !darkMode ? darkTheme.text : lightTheme.text;
+    document.body.style.backgroundImage = !darkMode
       ? darkTheme.backgroundImage
       : lightTheme.backgroundImage; // Update background image
     document.body.classList.toggle("dark-mode", !darkMode);
   };
 
   useEffect(() => {
-    // Apply saved theme from localStorage
-    const savedMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(savedMode);
-    document.body.style.backgroundColor = savedMode
+    // Lade den gespeicherten Modus aus dem localStorage, falls vorhanden
+    const savedMode = localStorage.getItem("darkMode");
+    const isDarkMode = savedMode === "true"; // Standard ist false (Light Mode)
+
+    setDarkMode(isDarkMode); // Setze den Modus basierend auf dem gespeicherten Wert
+    document.body.style.backgroundColor = isDarkMode
       ? darkTheme.background
       : lightTheme.background;
-    document.body.style.color = savedMode ? darkTheme.text : lightTheme.text;
-    document.body.style.backgroundImage = savedMode
+    document.body.style.color = isDarkMode ? darkTheme.text : lightTheme.text;
+    document.body.style.backgroundImage = isDarkMode
       ? darkTheme.backgroundImage
-      : lightTheme.backgroundImage; // Apply background image from saved theme
-    document.body.classList.toggle("dark-mode", savedMode);
+      : lightTheme.backgroundImage; // Setze das entsprechende Hintergrundbild
+    document.body.classList.toggle("dark-mode", isDarkMode);
   }, []);
 
   return (
