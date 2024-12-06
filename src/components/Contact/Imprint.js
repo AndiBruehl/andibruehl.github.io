@@ -122,6 +122,7 @@ const Impressum = () => {
               <p>
                 <strong>Haftung für Links</strong>
                 <br />
+                <br></br>
                 Unser Angebot enthält Links zu externen Webseiten Dritter oder
                 kann diese enthalten, auf deren Inhalte wir keinen Einfluss
                 haben. Deshalb können wir für diese fremden Inhalte auch keine

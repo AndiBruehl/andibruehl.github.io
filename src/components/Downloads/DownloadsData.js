@@ -30,9 +30,9 @@ const downloadsData = [
     link: "https://drive.google.com/file/d/1yjGqSnotTH397PBEdwSeJ8HEZQSLuyBw/view?usp=drive_link",
   },
   {
-    id: "MemSnap-Download",
+    id: "MemSnapBeta-Download",
     handler: "memSnapDownloadCert",
-    text: "↓ MemSnap.apk - Save your favorite locations on your device!",
+    text: "↓ MemSnapBeta.apk - Save your favorite locations on your device!",
     link: "https://drive.google.com/file/d/1utOkPZFcylJ6PV0vZ7ib2IMeFEftJO40/view?usp=drive_link",
   },
   {

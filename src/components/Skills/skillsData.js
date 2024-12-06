@@ -3,7 +3,7 @@
 export const skillData = [
   {
     title: "BACKEND / Database",
-    skills: [" Python - NodeJS - C#"],
+    skills: [" Python - NodeJS "],
   },
   {
     title: "FRONTEND",

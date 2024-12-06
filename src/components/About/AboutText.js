@@ -5,9 +5,9 @@ const AboutText = () => {
     <>
       <h2>Hallo, ich bin Andreas Brühl ...</h2>
       <p>
-        ... ein begeisterter DevOps-Experte und AWS Cloud Practitioner auf der
-        Suche nach einem Fullstack-Job. Meine Reise in die Technologie begann
-        früh, und meine Leidenschaft dafür hat mich bis heute nicht losgelassen.{" "}
+        ... ein begeisterter React-Entwickler auf der Suche nach einem
+        Fullstack-Job. Meine Reise in die Technologie begann früh, und meine
+        Leidenschaft dafür hat mich bis heute nicht losgelassen.{" "}
       </p>
       <p>
         Ich verfüge über umfangreiche Kenntnisse und Erfahrungen in der

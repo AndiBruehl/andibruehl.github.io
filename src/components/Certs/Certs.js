@@ -91,7 +91,7 @@ const Certs = () => {
       className="container"
     >
       <div id="certs">
-        <PageHeader title={"Certificates"} />
+        <PageHeader title={"Zertifikate"} />
         <Header
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

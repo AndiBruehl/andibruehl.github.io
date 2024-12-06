@@ -1,3 +1,4 @@
+import slide_image_0 from "./assets/images/image0.png";
 import slide_image_1 from "./assets/images/image1.png";
 import slide_image_2 from "./assets/images/image2.png";
 import slide_image_3 from "./assets/images/image3.png";
@@ -28,6 +29,7 @@ import slide_image_27 from "./assets/images/image27.png";
 import slide_image_28 from "./assets/images/image28.png";
 
 const images = [
+  slide_image_0,
   slide_image_1,
   slide_image_2,
   slide_image_3,

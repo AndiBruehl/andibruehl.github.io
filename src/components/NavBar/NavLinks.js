@@ -16,16 +16,16 @@ const NavLinks = ({ isMobile, closeMobileMenu }) => {
   };
 
   const links = [
-    { name: "Home", href: "/", delay: 0.05 },
-    { name: "About", href: "/about", delay: 0.1 },
+    { name: "Start", href: "/", delay: 0.05 },
+    { name: "Überblick", href: "/about", delay: 0.1 },
     { name: "Skills", href: "/skills", delay: 0.15 },
     { name: "Portfolio", href: "/portfolio", delay: 0.2 },
     { name: "Links", href: "/links", delay: 0.25 },
     // { name: "YouTube", href: "/youtube", delay: 0.3 },
-    { name: "Certificates", href: "/certs", delay: 0.35 },
+    { name: "Zertifikate", href: "/certs", delay: 0.35 },
     { name: "Downloads", href: "/downloads", delay: 0.4 },
-    { name: "Contact", href: "/contact", delay: 0.45 },
-    { name: "Imprint", href: "/imprint", delay: 0.45, hidden: true },
+    { name: "Kontakt", href: "/contact", delay: 0.45 },
+    { name: "Impressum", href: "/imprint", delay: 0.45, hidden: true },
   ];
 
   return (
