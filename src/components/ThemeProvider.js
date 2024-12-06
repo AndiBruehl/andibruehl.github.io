@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { lightTheme, darkTheme } from "../styles/themes";
 
 const ThemeProvider = ({ children }) => {
-  const [theme] = useState("dark");
+  const [theme] = useState("light");
 
   const root = document.documentElement;
   const themeVariables = theme === "dark" ? darkTheme : lightTheme;
