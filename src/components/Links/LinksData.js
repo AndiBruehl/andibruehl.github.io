@@ -57,12 +57,12 @@ const linksData = [
     alt: "bookiesList",
     text: "LieferMax - Dein LieferService!",
   },
-  {
-    href: "https://achat.vercel.app/",
-    icon: "https://www.svgrepo.com/show/412082/stream.svg",
-    alt: "bookiesList",
-    text: "ACHAT",
-  },
+  // {
+  //   href: "https://achat.vercel.app/",
+  //   icon: "https://www.svgrepo.com/show/412082/stream.svg",
+  //   alt: "bookiesList",
+  //   text: "ACHAT",
+  // },
   {
     href: "https://farbgenerator.netlify.app/",
     icon: "https://www.svgrepo.com/show/497798/brush-1.svg",
