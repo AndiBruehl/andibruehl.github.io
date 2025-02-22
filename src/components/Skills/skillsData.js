@@ -2,7 +2,7 @@
 
 export const skillData = [
   {
-    title: "BACKEND / Database",
+    title: "BACKEND",
     skills: [" Python - NodeJS "],
   },
   {
