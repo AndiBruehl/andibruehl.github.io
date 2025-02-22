@@ -86,7 +86,7 @@ const Impressum = () => {
               <p>
                 <strong>Kontakt:</strong>
                 <br />
-                Telefon: +49-017623184023
+                Telefon: +4917623184023
                 <br />
                 E-Mail:{" "}
                 <a href="mailto:a.bruehl2019@gmail.com">
