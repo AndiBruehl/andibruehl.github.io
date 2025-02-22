@@ -160,7 +160,7 @@ const Contacts = () => {
         </a>
       </motion.div>
       <motion.p className={classes.FooterText} variants={footerTextVariants}>
-        &copy; {currentYear} A. Brühl - All rights reserved
+        &copy; 2024 - {currentYear} A. Brühl - All rights reserved
       </motion.p>
 
       {/* <motion.a
