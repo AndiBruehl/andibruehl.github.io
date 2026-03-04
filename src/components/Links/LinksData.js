@@ -78,13 +78,19 @@ const linksData = [
   {
     href: "https://search4githubusers.netlify.app/",
     icon: "https://www.svgrepo.com/show/506654/github.svg",
-    alt: "jobstar",
+    alt: "search4githubusers",
     text: "Search4GithubUsers - Github User übersichtlich dargestellt.",
+  },
+  {
+    href: "https://search4githubuser.netlify.app/",
+    icon: "https://www.svgrepo.com/show/506654/github.svg",
+    alt: "search4githubuser",
+    text: "Search4GithubUser Version 2 - Einzelner Github User übersichtlich dargestellt.",
   },
   {
     href: "https://comfysloth-demo.netlify.app/",
     icon: "https://www.svgrepo.com/show/176721/sloth-animal.svg",
-    alt: "jobstar",
+    alt: "ComfySloth",
     text: "ComfySloth-Demo... Prototyp einer E-Commerce-Website",
   },
 ];
